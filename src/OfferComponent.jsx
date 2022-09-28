@@ -9,7 +9,7 @@ const OfferComponent = (props) => {
     else if (props.simpleInterest < 1000 && props.simpleInterest <= 2000) {
         msg = 'CIBIL SCORE = 800'
     }
-    else {
+    else if (props.simpleInterest > 2000) {
         msg = 'CIBIL SCORE = 850'
     }
 
@@ -17,6 +17,9 @@ const OfferComponent = (props) => {
         <div>
             <div style={{ color: "red", fontSize: 24 }}>
                 {msg}
+            </div>
+            <div style={{ color: "blue", fontSize: 24 }}>
+                {props.msg}
             </div>
         </div>
     )

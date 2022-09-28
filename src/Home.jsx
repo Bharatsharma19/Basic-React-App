@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import { Grid, TextField, Button } from '@mui/material';
 import CurrencyRupeeTwoToneIcon from '@mui/icons-material/CurrencyRupeeTwoTone';
+import OfferComponent from './OfferComponent';
 
 const Home = () => {
 
@@ -44,6 +45,9 @@ const Home = () => {
                     <Grid xs={12} item style={{ paddingTop: "24px" }}>
                         {simpleInterest !== '' ? <h2>Simple Interest is <CurrencyRupeeTwoToneIcon /> {simpleInterest}</h2> : <></>}
                         {amount !== '' ? <h2>Amount after Interest is <CurrencyRupeeTwoToneIcon /> {amount}</h2> : <></>}
+                    </Grid>
+                    <Grid xs={12} item>
+                        <OfferComponent simpleInterest={simpleInterest} msg="Thanks!" />
                     </Grid>
                 </Grid>
             </div>

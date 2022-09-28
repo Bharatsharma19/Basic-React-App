@@ -42,8 +42,8 @@ const Home = () => {
                         <Button variant='outlined' color='primary' fullWidth onClick={handleSubmit}>Calculate</Button>
                     </Grid>
                     <Grid xs={12} item style={{ paddingTop: "24px" }}>
-                        <h2>Simple Interest is <CurrencyRupeeTwoToneIcon /> {simpleInterest}</h2>
-                        <h2>Amount after interest is <CurrencyRupeeTwoToneIcon /> {amount}</h2>
+                        {simpleInterest !== '' ? <h2>Simple Interest is <CurrencyRupeeTwoToneIcon /> {simpleInterest}</h2> : <></>}
+                        {amount !== '' ? <h2>Amount after Interest is <CurrencyRupeeTwoToneIcon /> {amount}</h2> : <></>}
                     </Grid>
                 </Grid>
             </div>
